@@ -1,7 +1,0 @@
-app:
-  openweathermap:
-    access-key: 470093b9e92109886214fd5a9bba9584
-    weather-request-prefix: http://api.openweathermap.org/data/2.5/weather?q=
-    forecast-request-prefix: http://api.openweathermap.org/data/2.5/forecast?q=
-    request-suffix: "&appid=${app.openweathermap.access-key}"
-    delimiter: ","
