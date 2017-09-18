@@ -8,12 +8,17 @@ angular.module('weatherApp', [])
             city: "",
             country: ""
         };
+
+        weatherCtrl.options = ["weather", "forecast"];
+
+        weatherCtrl.selected = weatherCtrl.options[0];
+
         weatherCtrl.result = "Empty";
 
         weatherCtrl.getWeather = function () {
             $http({
                 method: "GET",
-                url: "http://localhost:8080/weather/" + weatherCtrl.location.city +"/"+ weatherCtrl.location.country
+                url: "http://localhost:8080/" + weatherCtrl.selected + "/" + weatherCtrl.location.city +"/"+ weatherCtrl.location.country
             })
                 .then(function (response) {
                     weatherCtrl.result = response.data;
