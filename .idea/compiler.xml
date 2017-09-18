@@ -7,20 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="car-wash-forecast" />
-        <module name="car-wash-forecast-backend" />
         <module name="frontend" />
-      </profile>
-      <profile name="Annotation profile for car-wash-forecast-parent" enabled="true">
-        <sourceOutputDir name="../frontend/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../frontend/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="car-wash-forecast-frontend" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="car-wash-forecast" target="1.8" />
-      <module name="car-wash-forecast-backend" target="1.8" />
-      <module name="car-wash-forecast-frontend" target="1.5" />
       <module name="car-wash-forecast-parent" target="1.5" />
       <module name="frontend" target="1.5" />
     </bytecodeTargetLevel>
