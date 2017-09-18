@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weatherApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Car wash forecast</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="weather.js"></script>
+</head>
+<body>
+    <div ng-controller="WeatherCtrl as weatherCtrl">
+        <form ng-submit="weatherCtrl.getWeather()">
+            <label>City and country:</label>
+            <input type="text" ng-model="weatherCtrl.location.city" placeholder="Enter city here">
+            <input type="text" ng-model="weatherCtrl.location.country" placeholder="Enter country here">
+            <hr>
+            <h2>City: {{weatherCtrl.location.city}}</h2>
+            <h2>Country: {{weatherCtrl.location.country}}</h2>
+            <input type="submit" value="Get weather">
+            <p>{{weatherCtrl.result}}</p>
+        </form>
+    </div>
+</body>
+</html>
