@@ -7,7 +7,7 @@ dist
 node
 
 # dependencies
-/node_modules
+car-wash-forecast-frontend/node_modules
 
 # testing
 /coverage
@@ -16,4 +16,3 @@ node
 /build
 
 npm-debug.log*
-car-wash-forecast-backend/src/test/
