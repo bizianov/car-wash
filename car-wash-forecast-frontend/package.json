@@ -1,8 +1,0 @@
-{
-  "name": "car_wash_forecast_tool",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "babel-preset-env": "^1.6.0"
-  }
-}

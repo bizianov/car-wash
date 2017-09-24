@@ -1,5 +1,5 @@
 angular.module('weatherApp')
-    .controller('WeatherCtrl', ['$scope', 'WeatherProvider', ($scope, WeatherProvider) => {
+    .controller('WeatherCtrl', ['$scope', 'WeatherProvider', function($scope, WeatherProvider) {
         $scope.location = {
             city: "",
             country: ""
@@ -13,9 +13,9 @@ angular.module('weatherApp')
 
         $scope.result = "Empty";
 
-        $scope.getWeather = () => {
+        $scope.getWeather = function () {
             WeatherProvider.getWeatherFunc($scope.selected.value, $scope.location.city, $scope.location.country)
-            .then((response) => {
+            .then(function (response) {
                 $scope.result = response.data;
             })
          }

@@ -1,27 +1,22 @@
-package application.dto;
+package application.dto.forecast;
 
+import application.dto.Clouds;
+import application.dto.MainInfo;
+import application.dto.Rain;
+import application.dto.Weather;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class CurrentWeather {
+public class ForecastItem {
 
-    @SerializedName("coord")
-    private Location location;
     private List<Weather> weather;
     @SerializedName("main")
     private MainInfo mainInfo;
+    private Rain rain;
     private Clouds clouds;
 
-    public CurrentWeather() {
-    }
-
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
+    public ForecastItem() {
     }
 
     public List<Weather> getWeather() {
@@ -40,6 +35,14 @@ public class CurrentWeather {
         this.mainInfo = mainInfo;
     }
 
+    public Rain getRain() {
+        return rain;
+    }
+
+    public void setRain(Rain rain) {
+        this.rain = rain;
+    }
+
     public Clouds getClouds() {
         return clouds;
     }
@@ -50,10 +53,10 @@ public class CurrentWeather {
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("CurrentWeather{");
-        sb.append("location=").append(location);
-        sb.append(", weather=").append(weather);
+        final StringBuffer sb = new StringBuffer("ForecastItem{");
+        sb.append("weather=").append(weather);
         sb.append(", mainInfo=").append(mainInfo);
+        sb.append(", rain=").append(rain);
         sb.append(", clouds=").append(clouds);
         sb.append('}');
         return sb.toString();

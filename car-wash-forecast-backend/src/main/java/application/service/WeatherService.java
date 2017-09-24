@@ -1,6 +1,7 @@
 package application.service;
 
-import application.dto.CurrentWeather;
+import application.dto.current.CurrentWeather;
+import application.dto.forecast.ForecastWeather;
 import application.request.RequestBuilder;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,7 @@ public class WeatherService implements WeatherProvider {
     public String getForecastWeather(String city, String countryCode) {
         String request = forecastWeatherRequestBuilders.buildRequest(city, countryCode);
         ResponseEntity<String> response = restTemplate.getForEntity(request, String.class);
-        return response.getBody();
+        ForecastWeather forecastWeather = gson.fromJson(response.getBody(), ForecastWeather.class);
+        return gson.toJson(forecastWeather);
     }
 }
