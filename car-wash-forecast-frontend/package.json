@@ -1,0 +1,13 @@
+{
+  "name": "car-wash-forecast-tool",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.6.6"
+  },
+  "devDependencies": {
+    "angular": "^1.6.6",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-env": "^1.6.0"
+  }
+}

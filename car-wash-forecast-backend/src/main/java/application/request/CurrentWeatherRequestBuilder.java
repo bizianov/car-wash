@@ -12,6 +12,9 @@ public class CurrentWeatherRequestBuilder implements RequestBuilder {
     private String requestSuffix;
     private String delimiter;
 
+    public CurrentWeatherRequestBuilder() {
+    }
+
     @Override
     public String buildRequest(String city, String countryCode) {
         return new StringBuilder()
