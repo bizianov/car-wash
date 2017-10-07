@@ -1,4 +1,4 @@
-angular.module('weatherApp', [])
+angular.module('weatherApp')
     .service('WeatherProvider', ['$http', function($http) {
         this.getWeatherFunc = (weatherMode, city, country) => {
             return $http({
