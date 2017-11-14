@@ -1,6 +1,5 @@
-package request;
+package application.request;
 
-import application.request.ForecastWeatherRequestBuilder;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

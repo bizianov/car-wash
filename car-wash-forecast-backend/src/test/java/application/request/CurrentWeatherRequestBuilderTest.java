@@ -1,6 +1,5 @@
-package request;
+package application.request;
 
-import application.request.CurrentWeatherRequestBuilder;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
