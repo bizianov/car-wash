@@ -2,10 +2,7 @@ package application.controller;
 
 import application.service.WeatherProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -20,13 +17,13 @@ public class WeatherController {
     }
 
     @CrossOrigin
-    @RequestMapping("/weather/{city}/{countryCode}")
+    @RequestMapping(value = "/weather/{city}/{countryCode}", method = RequestMethod.GET)
     public String weatherRequest(@PathVariable String city, @PathVariable String countryCode) {
         return weatherProvider.getCurrentWeather(city, countryCode);
     }
 
     @CrossOrigin
-    @RequestMapping("/forecast/{city}/{countryCode}")
+    @RequestMapping(value = "/forecast/{city}/{countryCode}", method = RequestMethod.GET)
     public String forecastRequest(@PathVariable String city, @PathVariable String countryCode) {
         return weatherProvider.getForecastWeather(city, countryCode);
     }
